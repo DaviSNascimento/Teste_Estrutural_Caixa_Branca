@@ -17,7 +17,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 ```
 
 **2. Construção da Query SQL (Linhas 10-12):**
-* **Erro:** A construção da query SQL é vulnerável a SQL Injection. A concatenação de strings diretamente na query pode permitir que usuários maliciosos injetem código SQL e comprometam a segurança do sistema.
+* **Erro:** O código estava construindo consultas SQL de forma insegura, permitindo que usuarios maliciosos manipulassem o banco de dados.
 * **Correção:** Utilizar Prepared Statements para parametrizar a query e evitar a injeção de código.
 
 ```java
