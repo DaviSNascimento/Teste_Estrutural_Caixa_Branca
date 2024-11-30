@@ -57,4 +57,13 @@ nomers.getString("nome");
 
 * **Falta de comentários:** A ausência de comentários dificulta a compreensão do código e a manutenção.
 * **Indentação:** A indentação inconsistente prejudica a legibilidade do código.
+***
+### Complexidade Ciclomática
+ A imagem a seguir representa o nivel de complexidade ciclomática analisado no código. Como há de se observar, ela possue os seguintes resultados:
+ * **N = 14**
+ * **E = 16**
+ * **M = 4**
+ * **NUMERO DE CAMINHOS: 4**
+
+![Teste Caixa Branca - Grafo de Fluxo(atualizado)](https://github.com/user-attachments/assets/bdab0bf5-3c08-4e03-9df6-644de965901c)
 
