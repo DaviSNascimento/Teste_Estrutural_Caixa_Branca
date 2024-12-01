@@ -6,7 +6,7 @@ Este documento tem como objetivo identificar e explicar os principais erros pres
 
 **Análise:**
 
-O código apresentado para análise apresenta diversas falhas que podem comprometer sua funcionalidade e segurança. A seguir, detalhamos cada um dos erros encontrados, referenciando as linhas em que ocorrem e apresentando trechos do código para melhor visualização.
+O código apresentado para análise apresenta diversas falhas que podem comprometer sua funcionalidade e segurança. A seguir, foi detalhado cada um dos erros encontrados, referenciando as linhas em que ocorrem e apresentando trechos do código para melhor visualização.
 
 **1. Conexão com o Banco de Dados (Linha 4):**
 * **Erro:** O nome da classe do driver MySQL está incorreto.
@@ -17,7 +17,7 @@ Class.forName("com.mysql.jdbc.Driver").newInstance();
 ```
 
 **2. Construção da Query SQL (Linhas 10-12):**
-* **Erro:** A construção da query SQL é vulnerável a SQL Injection. A concatenação de strings diretamente na query pode permitir que usuários maliciosos injetem código SQL e comprometam a segurança do sistema.
+* **Erro:** O código estava construindo consultas SQL de forma insegura, permitindo que usuarios maliciosos manipulassem o banco de dados.
 * **Correção:** Utilizar Prepared Statements para parametrizar a query e evitar a injeção de código.
 
 ```java
@@ -57,24 +57,4 @@ nomers.getString("nome");
 
 * **Falta de comentários:** A ausência de comentários dificulta a compreensão do código e a manutenção.
 * **Indentação:** A indentação inconsistente prejudica a legibilidade do código.
-
-**Recomendações:**
-
-* Corrigir todos os erros identificados.
-* Utilizar Prepared Statements para evitar SQL Injection.
-* Implementar um tratamento de exceções mais robusto.
-* Fechar as conexões com o banco de dados corretamente.
-* Adicionar comentários para explicar a lógica do código.
-* Formatar o código de forma consistente para melhorar a legibilidade.
-
-Ao seguir estas recomendações, você poderá criar um código mais seguro, eficiente e fácil de manter.
-
-**Observação:** Este README apresenta uma análise inicial dos erros. Uma análise mais profunda pode revelar outros problemas que não foram identificados nesta primeira avaliação.
-
-**Próximos Passos:**
-
-* Implementar as correções sugeridas.
-* Testar o código para garantir que funcione corretamente.
-* Refatorar o código para melhorar sua estrutura e legibilidade.
-
-Este documento pode ser utilizado como base para a correção e melhoria do código.
+***
